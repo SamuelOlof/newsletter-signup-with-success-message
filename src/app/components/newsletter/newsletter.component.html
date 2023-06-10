@@ -1,0 +1,24 @@
+<div *ngIf="subscribeButtonClicked == false" class="container">
+    <img src="./assets/images/illustration-sign-up-mobile.svg" alt="illustration-signup" class="container__illustration-img">
+
+    <div class="flex-left">
+        <div class="container__body">
+            <h1>Stay Updated!</h1>
+    
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+    
+            <div class="container__updates" *ngFor="let data of updates">
+                <img src="./assets/images/icon-list.svg" alt="icon-list">
+                <p> {{data.update}}</p>
+            </div>
+        </div>
+    
+        <div class="container__email">
+            <p>Email address</p>
+            <input type="email" placeholder="email@company.com">
+            <button (click)="subBtn()"> Subscribe to monthly newsletter</button>
+        </div>
+    </div>
+</div>
+
+<app-success-modal *ngIf="subscribeButtonClicked == true"></app-success-modal>
