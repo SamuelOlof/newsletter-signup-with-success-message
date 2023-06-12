@@ -23,6 +23,16 @@
         flex-direction: column;
         padding: 0 1rem;
 
+        &-para{
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+
+            .invalid{
+                color: hsl(4, 100%, 67%);
+            }
+        }
+
         input{
             margin-bottom: 1rem;
             padding: 0.5rem 1rem;

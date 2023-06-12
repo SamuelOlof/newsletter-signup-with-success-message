@@ -14,11 +14,14 @@
         </div>
     
         <div class="container__email">
-            <p>Email address</p>
-            <input type="email" placeholder="email@company.com">
-            <button (click)="subBtn()"> Subscribe to monthly newsletter</button>
+            <div class="container__email-para">
+                <p>Email address</p>
+                <p class="invalid" *ngIf="prmEmail.errors?.email"> Valid email required</p>
+            </div>
+            <input matIput [(ngModel)]="email" email type="email" placeholder="email@company.com" #prmEmail="ngModel">
+            <button [disabled]="prmEmail.errors?.email" (click)="subBtn()"> Subscribe to monthly newsletter</button>
         </div>
     </div>
 </div>
 
-<app-success-modal *ngIf="subscribeButtonClicked == true"></app-success-modal>
+<app-success-modal [email]="email" *ngIf="subscribeButtonClicked == true"></app-success-modal>

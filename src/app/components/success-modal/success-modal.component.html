@@ -5,10 +5,10 @@
 
             <h1>Thanks for subscribing!</h1>
 
-            <p>A confirmation email has been sent to <span>sdjsld@gmail.com</span>. Please open it and click the button inside to confirm you subscription.</p>
+            <p>A confirmation email has been sent to <span class="email">{{email}}</span>. Please open it and click the button inside to confirm you subscription.</p>
         </div>
         
-        <button>Dismiss message</button>
+        <button (click)="reload()">Dismiss message</button>
     </div>
 
     

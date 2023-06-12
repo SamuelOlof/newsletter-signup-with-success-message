@@ -3,9 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+    font-family: "Roboto_regular", Arial, Helvetica, sans-serif;
     
     .newsletter{
         width: fit-content;
@@ -14,9 +12,6 @@
 
 @media screen and (min-width:1024px) {
     .container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color: hsl(235, 18%, 26%);
         height: 100vh;
         width: 100vw;

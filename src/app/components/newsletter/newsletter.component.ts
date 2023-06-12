@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
 
 export class NewsletterComponent {
   subscribeButtonClicked:boolean = false;
+  email: string;
 
   updates = [
     {"update": "Product discovery and building what matters"},
@@ -19,5 +20,6 @@ export class NewsletterComponent {
 
   subBtn(){
     this.subscribeButtonClicked = true;
+    this.email = this.email;
   }
 }
