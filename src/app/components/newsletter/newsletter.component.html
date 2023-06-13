@@ -1,5 +1,9 @@
 <div *ngIf="subscribeButtonClicked == false" class="container">
-    <img src="./assets/images/illustration-sign-up-mobile.svg" alt="illustration-signup" class="container__illustration-img">
+    <!-- <img src="./assets/images/illustration-sign-up-mobile.svg" srcset="./assets/images/illustration-sign-up-desktop.svg 1024w" alt="illustration-signup" class="container__illustration-img"> -->
+    <picture>
+        <source class="container__illustration-img" media="(min-width: 1024px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
+        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="illustration-signup" class="container__illustration-img">
+    </picture>
 
     <div class="flex-left">
         <div class="container__body">
